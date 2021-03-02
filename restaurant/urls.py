@@ -21,4 +21,5 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/' ,views.index),
+    path('reserve/',views.ReserveView, name="reserve"),
 ]

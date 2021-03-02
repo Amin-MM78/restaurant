@@ -15,9 +15,6 @@ class Food(models.Model):
    
 
 class ReserveTable(models.Model):
-    FirstName=models.CharField(max_length=30)
-    LastName=models.CharField(max_length=50)
-    Mobile=models.CharField(max_length=10) 
-    Email=models.EmailField(blank=True) 
+    name=models.CharField(max_length=30)
     ReserveDateTime=models.DateTimeField()   
-    NoOfPeople=models.SmallIntegerField(verbose_name='Number of People')
+    how_many=models.SmallIntegerField(verbose_name='Number of People')
