@@ -104,7 +104,13 @@
 				<div class="col-md-12 text-center">
 					<div class="display-t js-fullheight">
 						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-							<h1>Reserved a Table at {{ task_datetime }} successfuly!</h1>
+							<h1>Welcome To Reservation Page</h1>
+
+
+							{% if task_datetime %}
+							<h1>You Reserved a Table at  {{ task_datetime }}  successfuly!</h1>
+							{% endif %}
+							
 						</div>
 					</div>
 				</div>
@@ -121,14 +127,15 @@
 					<h2>Reservation</h2>
 					<div class="row">
 						<div class="col-md-6">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam, itaque, nesciunt similique commodi omnis. Ad magni perspiciatis, voluptatum repellat.</p>
+							<h2>You can reserve a table in our restaurant please fill al the fields for better services.</h2>
 						</div>
 					</div>
 				</div>
 				
 				<div class="col-md-6 col-md-push-6 col-sm-6 col-sm-push-6">
-					<form action="{% url 'reserve' %}"  method="post" id="form-wrap">
+					<form action=""  method="POST" id="form-wrap">
 						{% csrf_token %}
+						{{ form }}
 						<div class="row form-group">
 							<div class="col-md-12">
 								<label for="name">Your Name</label>
@@ -139,10 +146,10 @@
 							<div class="col-md-12">
 								<label for="many">How Many People</label>
 								<select name="many" id="many" class="form-control custom_select">
-									<option value="#">1</option>
-									<option value="#">2</option>
-									<option value="#">3</option>
-									<option value="#">4+</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
 								</select>
 							</div>
 						</div>

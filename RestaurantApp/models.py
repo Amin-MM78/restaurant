@@ -16,5 +16,5 @@ class Food(models.Model):
 
 class ReserveTable(models.Model):
     name=models.CharField(max_length=30)
-    ReserveDateTime=models.DateTimeField()   
+    ReserveDateTime=models.TextField(max_length=20)   
     how_many=models.SmallIntegerField(verbose_name='Number of People')
