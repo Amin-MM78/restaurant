@@ -3,6 +3,7 @@ from .models import ReserveTable
 from .models import Food
 from .models import About
 from .models import ContactForm
+from .models import Gallery
 from django.core.mail import send_mail
 
 def index (request):
@@ -38,7 +39,7 @@ def ContactView(request):
 		inst = ContactForm(name=name,email=email,subject=subject,message=message)
 		inst.save()
 
-		"""send_mail(
+		send_mail(
 
 			name,
 			email,
@@ -46,7 +47,7 @@ def ContactView(request):
 			message,
 			['aminmalek5@gmail.com']
 
-			)"""
+			)
 		#sending email
 		return render(request,'RestaurantApp/contact.html',{'name' : name})
 	else:
@@ -64,8 +65,11 @@ def AboutView(request):
 
 
 def GalleryView(request):
-
-	return render(request,'RestaurantApp/gallery.html')
+	gquery = Gallery.objects.all()
+	context = {
+	'image_list':gquery
+	}
+	return render(request,'RestaurantApp/gallery.html',context)
 
 
 

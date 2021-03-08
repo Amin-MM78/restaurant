@@ -36,3 +36,7 @@ class ContactForm(models.Model):
   email = models.EmailField(max_length=30 , verbose_name='write your email here')
   subject = models.CharField(max_length=20)
   message = models.TextField(max_length=300)
+
+class Gallery(models.Model):
+  image_food = models.ImageField()
+  author = models.ForeignKey(User, on_delete=models.CASCADE)
