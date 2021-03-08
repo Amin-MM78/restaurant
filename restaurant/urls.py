@@ -19,12 +19,18 @@ from django.urls import path
 from RestaurantApp import views
 from django.conf import settings
 from django.conf.urls.static import static
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('' ,views.index),
-    path('reserve/',views.ReserveView, name="reserve"),
-    path('menu/',views.MenuView,name="menu"),
+    path('' ,views.index, name="index"),
+    path('reserve/',views.ReserveView, name="ReserveView"),
+    path('menu/',views.MenuView,name="MenuView"),
+    path('contact',views.ContactView,name="ContactView"),
+    path('about',views.AboutView,name="AboutView"),
+    path('gallery',views.GalleryView,name="GalleryView"),
 ]
+
+
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL,
                           document_root=settings.STATIC_ROOT)
