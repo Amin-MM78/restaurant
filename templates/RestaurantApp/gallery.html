@@ -123,31 +123,34 @@
 					</div>
 				</div>
 				
-
+				{% for obj in image_list %}
 				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
-					<div class="fh5co-bg-img" style="background-image: url(images/gallery_1.jpeg);" data-trigger="zoomerang"></div>
+					<div class="fh5co-bg-img" style="background-image: url({{ obj.image_food.url }});" data-trigger="zoomerang"></div>
 					<div class="fh5co-bg-img" style="background-image: url(images/gallery_2.jpeg);" data-trigger="zoomerang"></div>
 				</div>
+				
 				<div class="col-md-6 col-sm-6 fh5co-gallery_item">
-					<div class="fh5co-bg-img fh5co-gallery_big" style="background-image: url(images/gallery_8.jpeg);" data-trigger="zoomerang"></div>
+					<div class="fh5co-bg-img fh5co-gallery_big" style="background-image: url({{ obj.image_food.url }});" data-trigger="zoomerang"></div>
 				</div>
+				{% endfor %}
+				<!--
 				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
-					<div class="fh5co-bg-img" style="background-image: url(images/gallery_4.jpeg);" data-trigger="zoomerang"></div>
-					<div class="fh5co-bg-img" style="background-image: url(images/gallery_5.jpeg);" data-trigger="zoomerang"></div>
+					<div class="fh5co-bg-img" style="background-image: url({{ obj.image_food.url }});" data-trigger="zoomerang"></div>
+					<div class="fh5co-bg-img" style="background-image: url({{ obj.image_food.url }});" data-trigger="zoomerang"></div>
 				</div>
 
 				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
-					<div class="fh5co-bg-img" style="background-image: url(images/gallery_5.jpeg);" data-trigger="zoomerang"></div>
-					<div class="fh5co-bg-img" style="background-image: url(images/gallery_6.jpeg);" data-trigger="zoomerang"></div>
+					<div class="fh5co-bg-img" style="background-image: url({{ obj.image_food.url }});" data-trigger="zoomerang"></div>
+					<div class="fh5co-bg-img" style="background-image: url({{ obj.image_food.url }});" data-trigger="zoomerang"></div>
 				</div>
 				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
-					<div class="fh5co-bg-img" style="background-image: url(images/gallery_7.jpeg);" data-trigger="zoomerang"></div>
-					<div class="fh5co-bg-img" style="background-image: url(images/gallery_8.jpeg);" data-trigger="zoomerang"></div>
+					<div class="fh5co-bg-img" style="background-image: url({{ obj.image_food.url }});" data-trigger="zoomerang"></div>
+					<div class="fh5co-bg-img" style="background-image: url({{ obj.image_food.url }});" data-trigger="zoomerang"></div>
 				</div>
 				<div class="col-md-6 col-sm-6 fh5co-gallery_item">
-					<div class="fh5co-bg-img fh5co-gallery_big" style="background-image: url(images/gallery_9.jpeg);" data-trigger="zoomerang"></div>
+					<div class="fh5co-bg-img fh5co-gallery_big" style="background-image: url({{ obj.image_food.url }});" data-trigger="zoomerang"></div>
 				</div>
-
+				
 				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
 					<div class="fh5co-bg-img" style="background-image: url(images/gallery_1.jpeg);" data-trigger="zoomerang"></div>
 					<div class="fh5co-bg-img" style="background-image: url(images/gallery_2.jpeg);" data-trigger="zoomerang"></div>
@@ -174,7 +177,7 @@
 			</div>
 		</div>
 	</div>
-
+	-->
 	<div id="fh5co-featured-testimony" class="fh5co-section">
 		<div class="container">
 			<div class="row">
