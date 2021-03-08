@@ -1,14 +1,14 @@
 {% load static %}
-{% load staticfiles %}
+
 <!DOCTYPE HTML>
 <html>
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Tasty &mdash;</title>
+	<title>Tasty </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
-	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="keywords" content="" />
 	<meta name="author" content="freehtml5.co" />
 
 	
@@ -56,23 +56,23 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 text-center logo-wrap">
-						<div id="fh5co-logo"><a href="index.html">Tasty<span>.</span></a></div>
+						<div id="fh5co-logo"><a href="{% url 'index' %}">Tasty<span>.</span></a></div>
 					</div>
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
-							<li><a href="">Home</a></li>
-							<li class="active"><a href="menu">Menu</a></li>
+							<li><a href="{% url 'index' %}">Home</a></li>
+							<li class="active"><a href="{% url 'MenuView' %}">Menu</a></li>
 							<li class="has-dropdown">
-								<a href="gallery.html">Gallery</a>
+								<a href="{% url 'GalleryView' %}">Gallery</a>
 								<ul class="dropdown">
 									<li><a href="#">Events</a></li>
 									<li><a href="#">Food</a></li>
 									<li><a href="#">Coffees</a></li>
 								</ul>
 							</li>
-							<li><a href="reserve">Reservation</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="{% url 'ReserveView' %}">Reservation</a></li>
+							<li><a href="{% url 'AboutView' %}">About</a></li>
+							<li><a href="{% url 'ContactView' %}">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -113,7 +113,7 @@
 				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap">
 					<div class="fh5co-item animate-box">
 						<img src= "{{ obj.image_food.url }}" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
-						<h3>{{ obj.food_name}}</h3>
+						<h3><a href="">{{ obj.food_name}}</a></h3>
 						<span class="fh5co-price">{{obj.price}}$</span>
 						<p class="text-muted"> {{obj.description}}</p>
 					</div>
@@ -259,8 +259,8 @@
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
 					<p>
-						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
-						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
+						<small class="block">&copy; Tasty Restaurant. All Rights Reserved.</small> 
+						<small class="block">Designed by <a href="http://aminmalek.ir/" target="_blank">AminMalek</a> </a></small>
 					</p>
 					<p>
 						<ul class="fh5co-social-icons">

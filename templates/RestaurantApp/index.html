@@ -1,14 +1,13 @@
 {% load static %}
-{% load staticfiles %}
 <!DOCTYPE HTML>
 <html>
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Tasty &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
+	<title>Tasty </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
-	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="description" content="" />
+	<meta name="keywords" />
 	<meta name="author" content="freehtml5.co" />
 
   	<!-- Facebook and Twitter integration -->
@@ -26,7 +25,7 @@
 	<link href="{% static 'https://fonts.googleapis.com/css?family=Satisfy' %}" rel="stylesheet">
 	
 	<!-- Animate.css -->
-	<link rel="stylesheet" href=" {% static 'css/animate.css' %}">
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
 	<!-- Icomoon Icon Fonts-->
 	<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
 	 <!-- Bootstrap  -->
@@ -58,19 +57,19 @@
 					</div>
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
-							<li class="active"><a href="">Home</a></li>
-							<li><a href="menu">Menu</a></li>
+							<li class="active"><a href="{% url 'index' %}">Home</a></li>
+							<li><a href="{% url 'MenuView' %}">Menu</a></li>
 							<li class="has-dropdown">
-								<a href="gallery.html">Gallery</a>
+								<a href="{% url 'GalleryView' %}">Gallery</a>
 								<ul class="dropdown">
-									<li><a href="{% static 'website/#' %}">Events</a></li>
-									<li><a href="{% static 'website/#' %}">Food</a></li>
-									<li><a href="{% static 'website/#' %}">Coffees</a></li>
+									<li><a href="">Events</a></li>
+									<li><a href="">Food</a></li>
+									<li><a href="">Coffees</a></li>
 								</ul>
 							</li>
-							<li><a href="">Reservation</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="{% url 'ReserveView' %}">Reservation</a></li>
+							<li><a href="{% url 'AboutView' %}">About</a></li>
+							<li><a href="{% url 'ContactView' %}">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -99,14 +98,18 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-md-pull-4 img-wrap animate-box" data-animate-effect="fadeInLeft">
-					<img src="{% static 'images/hero_1.jpeg' %}">
+					<img src="{% static 'images/cs_KOPIE BAR.jpg' %}">
 				</div>
 				<div class="col-md-5 col-md-push-1 animate-box">
 					<div class="section-heading">
 						<h2>The Restaurant</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae neque quisquam at deserunt ab praesentium architecto tempore saepe animi voluptatem molestias, eveniet aut laudantium alias, laboriosam excepturi, et numquam? Atque tempore iure tenetur perspiciatis, aliquam, asperiores aut odio accusamus, unde libero dignissimos quod aliquid neque et illo vero nesciunt. Sunt!</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam iure reprehenderit nihil nobis laboriosam beatae assumenda tempore, magni ducimus abentey.</p>
-						<p><a href="{% static '#' %}" class="btn btn-primary btn-outline">Our History</a></p>
+						<p>Lunch
+								In our restaurant, we serve (almost) every afternoon a lunch buffet from 12.00 o’clock till 13.30 (except on Saturday and Sunday). On the buffet, you can find for example: The soup of the day, several meats, several cheeses, several types of bread, 6 kind of warm dishes (the dishes will change by day), several sweet fillings, several salads, coffee, tea, milk, buttermilk, orange juice and yoghurt.
+								Price: €19.50 per person.
+								It is also possible to lunch a la carte at our restaurant.
+								Dinner
+								It is possible to have dinner a la carte in our restaurant. We serve a special menu for groups. Except our extensive menu card, with by example our Valkdishes, we also serve seasonal dishes. In the months May and June we serve delicious fresh asparagus. In the summer months we presents the real mussels from Zeeland and in the autumn we serve delicious venison dishes.</p>
+						<p><a href="{% url 'AboutView' %}" class="btn btn-primary btn-outline">Our History</a></p>
 					</div>
 				</div>
 			</div>
@@ -321,7 +324,7 @@
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Book a Table</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae vitae cupiditate, sequi quam ea id dolor reiciendis consectetur repudiandae. Rem quam, repellendus veniam ipsa fuga maxime odio? Eaque!</p>
-					<p><a href="reservation.html" class="btn btn-primary btn-outline">Book Now</a></p>
+					<p><a href="{% url 'ReserveView' %}" class="btn btn-primary btn-outline">Book Now</a></p>
 				</div>
 			</div>
 		</div>
@@ -337,10 +340,10 @@
 				<div class="col-md-2 col-md-push-1 fh5co-widget">
 					<h4>Links</h4>
 					<ul class="fh5co-footer-links">
-						<li><a href="{% static '#' %}">Home</a></li>
-						<li><a href="{% static '#' %}">About</a></li>
-						<li><a href="{% static '#' %}">Menu</a></li>
-						<li><a href="{% static '#' %}">Gallery</a></li>
+						<li><a href="{% url 'index' %}">Home</a></li>
+						<li><a href="{% url 'AboutView' %}">About</a></li>
+						<li><a href="{% url 'MenuView' %}">Menu</a></li>
+						<li><a href="{% url 'GalleryView' %}">Gallery</a></li>
 					</ul>
 				</div>
 
@@ -371,7 +374,7 @@
 				<div class="col-md-12 text-center">
 					<p>
 						<small class="block">&copy; Tasty Restaurant. All Rights Reserved.</small> 
-						<small class="block">Designed by <a href="http://aminmalek.ir/" target="_blank">AminMalek</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
+						<small class="block">Designed by <a href="http://aminmalek.ir/" target="_blank">AminMalek</a> </a></small>
 					</p>
 					<p>
 						<ul class="fh5co-social-icons">

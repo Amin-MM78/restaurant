@@ -21,3 +21,18 @@ class ReserveTable(models.Model):
     name = models.CharField(max_length=30)
     ReserveDateTime = models.TextField(max_length=20)   
     how_many = models.SmallIntegerField(verbose_name='Number of People')
+
+class About(models.Model):
+  title = models.CharField(max_length=10)
+  description = models.TextField(max_length=300)
+  image = models.ImageField()
+  author = models.ForeignKey(User, on_delete=models.CASCADE)
+
+  def __str__(self):
+      return self.title
+
+class ContactForm(models.Model):
+  name = models.CharField(max_length=10)
+  email = models.EmailField(max_length=30 , verbose_name='write your email here')
+  subject = models.CharField(max_length=20)
+  message = models.TextField(max_length=300)
