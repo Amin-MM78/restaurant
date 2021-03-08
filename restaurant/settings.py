@@ -123,6 +123,13 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-VENV_PATH = os.path.dirname(BASE_DIR)
+VENV_PATH = os.path.dirname(BASE_DIR) 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
 
+
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = '1025'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL= False
