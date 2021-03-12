@@ -30,6 +30,12 @@ def MenuView(request):
 
 	return render(request,'RestaurantApp/menu.html',context)
 
+def listmenu (request , id):
+	context ={} 
+	context["data"] = Food.objects.get(id = id)
+
+	return render(request,'RestaurantApp/listmenu.html',context)
+
 def ContactView(request):
 	if request.method == "POST":
 		name = request.POST['name']
