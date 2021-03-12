@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 class FoodCategory(models.Model):
     name=models.CharField(max_length=30)
 
@@ -16,6 +17,10 @@ class Food(models.Model):
 
    def __str__(self):
       return self.food_name
+
+   def get_absolute_url(self):
+      return reverse('listmenu',kwargs={'id': self.id})
+
 
 class ReserveTable(models.Model):
     name = models.CharField(max_length=30)
