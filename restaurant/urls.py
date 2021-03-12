@@ -28,6 +28,7 @@ urlpatterns = [
     path('contact',views.ContactView,name="ContactView"),
     path('about',views.AboutView,name="AboutView"),
     path('gallery',views.GalleryView,name="GalleryView"),
+    path('listmenu/<int:id>/',views.listmenu,name="listmenu"),
 ]
 
 
