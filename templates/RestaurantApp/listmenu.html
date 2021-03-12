@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>s
+		<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap">
+					<div class="fh5co-item animate-box">
+						<img src= "{{ obj.image_food.url }}" class="img-responsive">
+						<h3><a href="">{{ data.food_name}}</a></h3>
+						<img src= "{{ data.image_food.url }}">
+						<span class="fh5co-price">Category: {{data.FCategory}}$</span>
+						<p class="text-muted">description: {{data.description}}</p>
+						<p> Size: {{data.size}}</p>
+						<p>Price: {{data.price}}$</p>
+						<style>
+						img {
+								  border: 1px solid #ddd;
+								  border-radius: 4px;
+								  padding: 5px;
+								  width: 150px;
+					        }
+					     </style>
+						
+						<p> preparation time: {{data.preparation_time}}</p>
+						<p> is it special? {{data.special_food}}</p>
+					</div>
+	</body>
+</html>
